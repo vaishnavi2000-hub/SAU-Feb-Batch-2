@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validate(){
+var name=document.getElementById("name").value;
+var phno=document.getElementById("phno").value;
+var email=document.getElementById("email").value;
+var pwd=document.getElementById("pwd").value;
+var cpwd=document.getElementById("cpwd").value;
+if(!isNaN(name)){
+alert("Please enter proper name");
+return false;}
+if(pwd!=cpwd){
+alert("Passwords are not matching");
+return false;}
+if(phno.length!=10||isNaN(phno)){
+alert("Please enter proper phone no");
+return false;}
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+  {
+    return (true);
+  }
+    alert("You have entered an invalid email address!");
+    return (false);}
+</script>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://static.toiimg.com/thumb/75735879/flight.jpg?width=1200&height=900");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+
+<form><b>
+       <table align="center" style="font-size:20px">
+        <tr>
+         <td>Name :</td> <td><input type="text" id="name" required></td><br>
+        </tr>
+        <tr>
+         <td>Login name:</td> <td><input type="text" id="name1" required></td><br>
+        </tr>
+        <tr>
+         <td>Email :</td> <td><input type="text" id="email" required></td><br>
+        </tr>
+        <tr>
+         <td>Password :</td> <td><input type="password" id="pwd" required></td><br>
+        </tr>
+        <tr>
+         <td>Confirm Password :</td> <td><input type="password" id="cpwd" required><br>
+        </tr>
+        <tr>
+        <td>Sex:</td>
+  <td><input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br></td>
+        </tr>
+        <tr>
+        <td>
+        Location:
+        </td>
+        <td><select name="location">
+    <option value="India">India</option>
+    <option value="US">US</option>
+    <option value="China">China</option>
+    <option value="Japan">Japan</option>
+  </select></td>
+        </tr>
+        <tr>
+        <td>Phn no:
+        </td>
+        <td>
+         <input type="text" id="phno" value="" required>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        </td>
+        <td>
+        <input type="checkbox" name="vehicle1" value="Bike" required> YES
+  <pre>I accept terms and conditions<pre>
+        </td>
+        </tr>
+        
+         <tr>
+         <td><input type="submit" value="Register" onclick="validate()" style="font-size:20px"></td>
+        </tr>
+       </table></b>
+      </form></body>
+</html>
