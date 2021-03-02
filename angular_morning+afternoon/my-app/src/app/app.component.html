@@ -1,0 +1,43 @@
+<!--<style>#show th, #show td{
+	padding: 13px;
+}
+form,table{
+	margin-top: 50px;
+	text-align: center;
+	background: #333;
+	color: #fff;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+</style>
+
+<h1>Employee Form</h1>
+<form [formGroup]="loginform">
+  First Name: <input type="text" name="firstname" formControlName="firstname" placeholder="firstname"><br><br>
+  Last Name: <input type="text" name="lastname" formControlName="lastname" placeholder="lastname"><br><br>
+ Contact Number: <input type="tel" name="contact" formControlName="contact" placeholder="contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+  Date Of Birth:<input type="date" name="dob" formControlName="dob" placeholder="DOB"><br><br>
+  City:<input type="text" name="city" formControlName="city" placeholder="city"><br><br>
+  Pincode:<input type="text" name="pincode" formControlName="pincode" placeholder="pincode"><br><br>
+  <input type="button" name="button" value="Add" onclick="AddRow()">
+  <button type="submit" >login</button>
+</form>
+<table border="4" id="show">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Contact Number</th>
+      <th>Date Of Birth</th>
+      <th>City</th>
+      <th>Pincode</th>
+    </tr>
+  </thead>
+</table>-->
+<div class="container">  
+  <div class="row">
+    <div class="col-xs-12">
+      <app-rows></app-rows>
+    </div>
+  </div>
+</div>

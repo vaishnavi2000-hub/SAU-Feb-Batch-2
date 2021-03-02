@@ -1,0 +1,102 @@
+<div class="card">
+<form [formGroup]="userForm">
+    <div class="mt-5 box">
+        <div class="form-row">
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Firstname</label>
+                </div>
+                <div class="form-row" style="margin-top:-10px;">
+                    <div class="col">
+                        <input type="text" formControlName="firstname" class="form-control" placeholder="Firstname">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Lastname</label>
+                </div>
+                <div class="form-row" style="margin-top:-10px;">
+                    <div class="col">
+                        <input type="text" formControlName="lastname" class="form-control" placeholder="Lastname">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Contact No</label>
+                </div>
+                <div class="form-row" style="margin-top:-10px;">
+                    <div class="col">
+                        <input type="text" formControlName="contactNo" class="form-control" placeholder="Contact No">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Date of Birth</label>
+                </div>
+                <div class="form-row" style="margin-top:-10px;">
+                    <div class="col">
+                        <input type="date" formControlName="dob" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>City</label>
+                </div>
+                <div class="form-row" style="margin-top:-10px;">
+                    <div class="col">
+                        <input type="text" formControlName="city" class="form-control" placeholder="City">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Pincode</label>
+                </div>
+                <div class="form-row" style="margin-top:-10px;">
+                    <div class="col">
+                        <input type="text" formControlName="pincode" class="form-control" placeholder="Pincode">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row mt-4">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" (click)="addItem()">Add</button>&nbsp;
+                </div>
+                    <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="col-md-8 mt-4 mb-4" style="margin-left: 200px;">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>ContactNo</th>
+                <th>DOB</th>
+                <th>City</th>
+                <th>Pincode</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngfor ="let item of listData">
+                <td><span>{{item.firstname}}</span></td>
+                <td><span>{{item.lastname}}</span></td>
+                <td><span>{{item.contactNo}}</span></td>
+                <td><span>{{item.dob}}</span></td>
+                <td><span>{{item.city}}</span></td>
+                <td><span>{{item.pincode}}</span></td>
+                <td><button type="button" class="btn btn-primary" (click)="removeItem(item)">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
